@@ -1,6 +1,6 @@
 #inputs
 import sys
-sys.set_int_max_str_digits(17000)
+sys.set_int_max_str_digits(100000)
 
 n = int(input().strip())
 x = int(input().strip())
