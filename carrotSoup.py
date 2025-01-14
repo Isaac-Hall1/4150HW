@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(20000)
+
 #inputs
 n = int(input())
 x = int(input())
