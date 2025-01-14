@@ -1,10 +1,9 @@
-import sys
-sys.setrecursionlimit(20000)
-
 #inputs
-n = int(input())
-x = int(input())
-y = int(input())
+n = int(input().strip())
+x = int(input().strip())
+y = int(input().strip())
+
+n = max(len(str(x)),len(str(y)))
 
 """
 SplitMultiply(x, y, n):
@@ -40,7 +39,7 @@ def splitmult(n,x,y:int) -> int:
 
 def fastmult(n,x,y:int) -> int:
     if n == 1:
-        return x*y
+        return x * y
     else:
         m = n//2
         a = x//(10**m)
