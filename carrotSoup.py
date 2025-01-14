@@ -19,6 +19,7 @@ return 10^2m*e + 10^m*(g + h) + f
 """
 
 def splitmult(n,x,y:int) -> int:
+
     if n == 1:
         return x*y
     else:
@@ -34,4 +35,18 @@ def splitmult(n,x,y:int) -> int:
     
         return ((10**(2*m))*e+(10**m)*(g+h)+f)
 
-print(splitmult(n,x,y))
+def fastmult(n,x,y:int) -> int:
+    if n == 1:
+        return x*y
+    else:
+        m = n//2
+        a = x//(10**m)
+        b = x % (10**m)
+        c = y//(10**m)
+        d = y % (10**m)
+        e = fastmult(m,a,c)
+        f = fastmult(m,b,d)
+        g = fastmult(m,a-b,c-d)
+        return ((10**(2*m))*e+(10**m)*(e+f-g)+f)
+
+print(fastmult(n,x,y))
