@@ -1,4 +1,7 @@
 #inputs
+import sys
+sys.set_int_max_str_digits(17000)
+
 n = int(input().strip())
 x = int(input().strip())
 y = int(input().strip())
