@@ -33,7 +33,6 @@ def BinarySearch(target):
     while low <= upper:
         mid = (low + upper) / 2
         checkMid = checkConstant(mid)
-        print(checkMid)
         if checkMid is None:
             low += precision
             continue
